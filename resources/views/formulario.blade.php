@@ -28,17 +28,20 @@
             <div class="mb-3">
                 <label for="cedula" class="form-label">Cédula</label>
                 <input type="text" required class="form-control" id="cedula" name="cedula"
-                    placeholder="Ingrese su cédula">
+                    placeholder="Ingrese su cédula" pattern="^\d{1,8}$"
+                    title="La cédula debe tener entre 1 y 8 dígitos y solo números.">
             </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" required class="form-control" id="nombre" name="nombre"
-                    placeholder="Ingrese su nombre">
+                    placeholder="Ingrese su nombre" pattern="^[a-zA-ZÀ-ÿ\s]+$"
+                    title="El nombre solo puede contener letras y espacios.">
             </div>
             <div class="mb-3">
                 <label for="apellido" class="form-label">Apellido</label>
                 <input type="text" required class="form-control" id="apellido" name="apellido"
-                    placeholder="Ingrese su apellido">
+                    placeholder="Ingrese su apellido" pattern="^[a-zA-ZÀ-ÿ\s]+$"
+                    title="El apellido solo puede contener letras y espacios.">
             </div>
             <div class="mb-3">
                 <label for="sexo" class="form-label">Sexo</label>
@@ -59,7 +62,7 @@
             </div>
             <div class="mb-3">
                 <label for="nacimiento" class="form-label">Fecha de nacimiento</label>
-                <input type="date" name="nacimiento" id="">
+                <input type="date" name="nacimiento" id="nacimiento" required max="{{ date('Y-m-d') }}">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>

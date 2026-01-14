@@ -102,11 +102,14 @@
                         <input type="hidden" name="persona_id" id="persona_id_input">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre del Contrato</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required
+                                pattern="^[a-zA-ZÀ-ÿ\s]+$"
+                                title="El nombre del contrato solo puede contener letras y espacios.">
                         </div>
                         <div class="mb-3">
                             <label for="numero" class="form-label">Número de Contrato</label>
-                            <input type="text" class="form-control" id="numero" name="numero" required>
+                            <input type="text" class="form-control" id="numero" name="numero" required pattern="^\d+$"
+                                title="El número de contrato solo puede contener números.">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -119,7 +122,7 @@
     </div>
 
     <script>
-        function setPersona(id, nombre, numero) { // obtener el id de la persona que seleccione en la lista
+        function setPersona(id, nombre, numero) { // obtener el los datos de la persona
             document.getElementById('persona_id_input').value = id;
             document.getElementById('nombre').value = nombre || '';
             document.getElementById('numero').value = numero || '';
