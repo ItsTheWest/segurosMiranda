@@ -1,6 +1,6 @@
 En este archivo explico los pasos que hice para que el proyecto funcionara y cómo arreglé los errores que me fueron saliendo en el camino, para dar sulcion a la problematica planteada
 
-## Flujo d etrabao para la prueba
+## Flujo de trabao para la prueba
 
 Tener en cuenta que trabaje con laravel 12 para terminar la prueba, ademas de la conexion para la base de datos que aparece en imagen, igual como sabra es editable sin ningun problema. Por otro lado usar los comnados  `npm run dev` y  `php artisan serve` para que el proyecto funcione correctamente. Primero se debe insertar un usuario  para que aparezac en la vista de lista y posterirmente se debe, hacer llenado del formulario del contrato correspondiente.
 
