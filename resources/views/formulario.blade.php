@@ -39,10 +39,6 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="numero" required class="form-label">Número</label>
-                <input type="number" class="form-control" id="numero" name="numero" placeholder="Ingrese un número">
-            </div>
-            <div class="mb-3">
                 <label for="ramo" class="form-label">Ramo</label>
                 <select class="form-select" id="ramo" name="ramo">
                     <option value="" selected>Seleccione un ramo</option>
