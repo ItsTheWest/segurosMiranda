@@ -1,4 +1,4 @@
-#Prueba tecnica Seguros miranda
+# Prueba tecnica Seguros miranda
 
 En este archivo explico los pasos que hice para que el proyecto funcionara y cómo arreglé los errores que me fueron saliendo en el camino, para dar sulcion a la problematica planteada
 
