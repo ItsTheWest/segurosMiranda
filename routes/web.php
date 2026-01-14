@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Route::get('/formulario', function () {
     return view('formulario');
-});
+})->name('formulario');
 
 Route::get('/lista', [App\Http\Controllers\peronascontrol::class, 'verlista'])->name('ver.lista');
 

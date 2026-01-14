@@ -6,8 +6,8 @@ En este archivo explico los pasos que hice para que el proyecto funcionara y có
 
 ### Instalación de dependencias
 Lo primero que hice fue intentar cargar el proyecto, pero me faltaba la carpeta `vendor`. Para solucionarlo ejecuté:
-* `composer install`
-* Como tuve algunos problemas de compatibilidad con mi versión de PHP, usé: `composer install --ignore-platform-reqs`
+ `composer install`
+** Como tuve algunos problemas de compatibilidad con mi versión de PHP, usé: `composer install --ignore-platform-reqs`
 
 ### Configuración del archivo .env y la Key
 Me apareció el error de que no había una llave de cifrado (encryption key). Los pasos que seguí fueron:
@@ -19,7 +19,14 @@ Realice el llenado del formulario en la vista para saber si todos los proceso se
 
 
 ### Corrección de Base de Datos
-Una vez teniendo eso, borré la tabla de personas y la fila de la tabla de migración importada, posteriormente la volví a migrar ya que había elementos cuyos tipos no eran los correctos.
+**Una vez teniendo eso, borré la tabla de personas y la fila de la tabla de migración importada, posteriormente la volví a migrar ya que había elementos cuyos tipos no eran los correctos.
 
 ### Visualización de datos y Controlador
-Realicé la parte de la tabla para ver la lista de personas con un diseño de Bootstrap ya definido. Posteriormente, realicé una función en el controlador de personas para obtener los datos de todos los registros que estaban en la tabla de personas; en la web realicé una petición para traer esos datos mediante el controlador y mostrarlos. para mostrar dichos datos en la vista realice una iteracion de los dtos que ya existian en la tabla, consulte como podria tomar el valor del año de la fecha(mediante la funcion carbon parse ya integrada), pude realizar una resta simple mediante una comparacion del dato del año que pase, con el age que toma el año del sistema 
+**Realicé la parte de la tabla para ver la lista de personas con un diseño de Bootstrap ya definido. Posteriormente, realicé una función en el controlador de personas para obtener los datos de todos los registros que estaban en la tabla de personas; en la web realicé una petición para traer esos datos mediante el controlador y mostrarlos. para mostrar dichos datos en la vista realice una iteracion de los dtos que ya existian en la tabla, consulte como podria tomar el valor del año de la fecha(mediante la funcion carbon parse ya integrada), pude realizar una resta simple mediante una comparacion del dato del año que pase, con el age que toma el año del sistema 
+
+### Logica para mander mensaje con js
+
+realize un script para que se enviar el mensaje una vez se enviara el formulario, lo hice directamente en blade ya que esto me aseguraba que se realizara despues de que el controlador verifcara que se hizo la inserccion de datos, tuve que realizar una instalacion de los paquetes de node js para poder usar estos scripts mediante  `npm install` y usar el comando  `npm run dev` para ver los resutaldos en tiempo real
+
+
+

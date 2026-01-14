@@ -6,14 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
     <div class="container mt-5">
         <h1 class="text-center mb-4">Formulario</h1>
-        <!-- filepath: /home/wdonis/Desktop/formulario/resources/views/formulario.blade.php -->
-        <form method="POST" action="{{ route('submit.form') }}">
-            @csrf <!-- Token CSRF obligatorio -->
+
+        @if(session('success'))
+
+            <script>
+                // Si prefieres también la alerta emergente:
+                document.addEventListener('DOMContentLoaded', function() {
+                    alert("{{ session('success') }}");
+                });
+            </script>
+        @endif
+
+        <form id="miFormulario" method="POST" action="{{ route('submit.form') }}">
+            @csrf
             <div class="mb-3">
                 <label for="cedula" class="form-label">Cédula</label>
                 <input type="text" required class="form-control" id="cedula" name="cedula"
@@ -57,8 +68,8 @@
         </div>
 
     </div>
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    @vite(['resources/js/app.js'])
 </body>
 
 </html>
