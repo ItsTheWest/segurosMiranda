@@ -16,8 +16,8 @@
         @if(session('success'))
 
             <script>
-                // Si prefieres también la alerta emergente:
-                document.addEventListener('DOMContentLoaded', function() {
+
+                document.addEventListener('DOMContentLoaded', function () {
                     alert("{{ session('success') }}");
                 });
             </script>

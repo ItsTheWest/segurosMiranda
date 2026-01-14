@@ -18,4 +18,9 @@ class personas extends Model
         'ramo',
     ];
     public $timestamps = true;
+
+    public function contrato()
+    {
+        return $this->hasOne(Contratos::class, 'id_persona');
+    }
 }
